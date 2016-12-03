@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<title>Node Chat</title>
+	<link rel="stylesheet"  type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="userName" id="namecontainer">
+		<input type="text" name="username" id="username" placeholder="Name please">
+		<p id="usernameError" style="color: red; display: none">Sorry! Already taken.</p>
+	</div>
+	<div class="container" id="chatcontainer">
+		<div id="onlineUsers">
+			<b><u>Users Online</u></b>
+			<i style="float: right">Click for private msg... (<a href="javascript:void(0)" id="clear">Clear</a>)</i>
+
+			<div style="clear:both"></div>
+			<ol id="onlineUsersList">
+			</ol>
+		</div>
+		<div class="chat" id="chatwindow"></div>
+		<div class="form">
+			<textarea name="message" id="messagebox" placeholder="Message:"></textarea>
+		</div>
+	</div>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/app.js"></script>
+	</body>
+</html>
